@@ -2,13 +2,13 @@
   "H": {
     "name": "Hydrogen"
   },
-  "He": {
+  "HE": {
     "name": "Helium"
   },
-  "Li": {
+  "LI": {
     "name": "Lithium"
   },
-  "Be": {
+  "BE": {
     "name": "Beryllium"
   },
   "B": {
@@ -26,19 +26,19 @@
   "F": {
     "name": "Fluorine"
   },
-  "Ne": {
+  "NE": {
     "name": "Neon"
   },
-  "Na": {
+  "NA": {
     "name": "Sodium"
   },
-  "Mg": {
+  "MG": {
     "name": "Magnesium"
   },
-  "Al": {
+  "AL": {
     "name": "Aluminium"
   },
-  "Si": {
+  "SI": {
     "name": "Silicon"
   },
   "P": {
@@ -47,313 +47,313 @@
   "S": {
     "name": "Sulfur"
   },
-  "Cl": {
+  "CL": {
     "name": "Chlorine"
   },
-  "Ar": {
+  "AR": {
     "name": "Argon"
   },
   "K": {
     "name": "Potassium"
   },
-  "Ca": {
+  "CA": {
     "name": "Calcium"
   },
-  "Sc": {
+  "SC": {
     "name": "Scandium"
   },
-  "Ti": {
+  "TI": {
     "name": "Titanium"
   },
   "V": {
     "name": "Vanadium"
   },
-  "Cr": {
+  "CR": {
     "name": "Chromium"
   },
-  "Mn": {
+  "MN": {
     "name": "Manganese"
   },
-  "Fe": {
+  "FE": {
     "name": "Iron"
   },
-  "Co": {
+  "CO": {
     "name": "Cobalt"
   },
-  "Ni": {
+  "NI": {
     "name": "Nickel"
   },
-  "Cu": {
+  "CU": {
     "name": "Copper"
   },
-  "Zn": {
+  "ZN": {
     "name": "Zinc"
   },
-  "Ga": {
+  "GA": {
     "name": "Gallium"
   },
-  "Ge": {
+  "GE": {
     "name": "Germanium"
   },
-  "As": {
+  "AS": {
     "name": "Arsenic"
   },
-  "Se": {
+  "SE": {
     "name": "Selenium"
   },
-  "Br": {
+  "BR": {
     "name": "Bromine"
   },
-  "Kr": {
+  "KR": {
     "name": "Krypton"
   },
-  "Rb": {
+  "RB": {
     "name": "Rubidium"
   },
-  "Sr": {
+  "SR": {
     "name": "Strontium"
   },
   "Y": {
     "name": "Yttrium"
   },
-  "Zr": {
+  "ZR": {
     "name": "Zirconium"
   },
-  "Nb": {
+  "NB": {
     "name": "Niobium"
   },
-  "Mo": {
+  "MO": {
     "name": "Molybdenum"
   },
-  "Tc": {
+  "TC": {
     "name": "Technetium"
   },
-  "Ru": {
+  "RU": {
     "name": "Ruthenium"
   },
-  "Rh": {
+  "RH": {
     "name": "Rhodium"
   },
-  "Pd": {
+  "PD": {
     "name": "Palladium"
   },
-  "Ag": {
+  "AG": {
     "name": "Silver"
   },
-  "Cd": {
+  "CD": {
     "name": "Cadmium"
   },
-  "In": {
+  "IN": {
     "name": "Indium"
   },
-  "Sn": {
+  "SN": {
     "name": "Tin"
   },
-  "Sb": {
+  "SB": {
     "name": "Antimony"
   },
-  "Te": {
+  "TE": {
     "name": "Tellurium"
   },
   "I": {
     "name": "Iodine"
   },
-  "Xe": {
+  "XE": {
     "name": "Xenon"
   },
-  "Cs": {
+  "CS": {
     "name": "Cesium"
   },
-  "Ba": {
+  "BA": {
     "name": "Barium"
   },
-  "La": {
+  "LA": {
     "name": "Lanthanum"
   },
-  "Ce": {
+  "CE": {
     "name": "Cerium"
   },
-  "Pr": {
+  "PR": {
     "name": "Praseodymium"
   },
-  "Nd": {
+  "ND": {
     "name": "Neodymium"
   },
-  "Pm": {
+  "PM": {
     "name": "Promethium"
   },
-  "Sm": {
+  "SM": {
     "name": "Samarium"
   },
-  "Eu": {
+  "EU": {
     "name": "Europium"
   },
-  "Gd": {
+  "GD": {
     "name": "Gadolinium"
   },
-  "Tb": {
+  "TB": {
     "name": "Terbium"
   },
-  "Dy": {
+  "DY": {
     "name": "Dysprosium"
   },
-  "Ho": {
+  "HO": {
     "name": "Holmium"
   },
-  "Er": {
+  "ER": {
     "name": "Erbium"
   },
-  "Tm": {
+  "TM": {
     "name": "Thulium"
   },
-  "Yb": {
+  "YB": {
     "name": "Ytterbium"
   },
-  "Lu": {
+  "LU": {
     "name": "Lutetium"
   },
-  "Hf": {
+  "HF": {
     "name": "Hafnium"
   },
-  "Ta": {
+  "TA": {
     "name": "Tantalum"
   },
   "W": {
     "name": "Tungsten"
   },
-  "Re": {
+  "RE": {
     "name": "Rhenium"
   },
-  "Os": {
+  "OS": {
     "name": "Osmium"
   },
-  "Ir": {
+  "IR": {
     "name": "Iridium"
   },
-  "Pt": {
+  "PT": {
     "name": "Platinum"
   },
-  "Au": {
+  "AU": {
     "name": "Gold"
   },
-  "Hg": {
+  "HG": {
     "name": "Mercury"
   },
-  "Tl": {
+  "TL": {
     "name": "Thallium"
   },
-  "Pb": {
+  "PB": {
     "name": "Lead"
   },
-  "Bi": {
+  "BI": {
     "name": "Bismuth"
   },
-  "Po": {
+  "PO": {
     "name": "Polonium"
   },
-  "At": {
+  "AT": {
     "name": "Astatine"
   },
-  "Rn": {
+  "RN": {
     "name": "Radon"
   },
-  "Fr": {
+  "FR": {
     "name": "Francium"
   },
-  "Ra": {
+  "RA": {
     "name": "Radium"
   },
-  "Ac": {
+  "AC": {
     "name": "Actinium"
   },
-  "Th": {
+  "TH": {
     "name": "Thorium"
   },
-  "Pa": {
+  "PA": {
     "name": "Protactinium"
   },
   "U": {
     "name": "Uranium"
   },
-  "Np": {
+  "NP": {
     "name": "Neptunium"
   },
-  "Pu": {
+  "PU": {
     "name": "Plutonium"
   },
-  "Am": {
+  "AM": {
     "name": "Americium"
   },
-  "Cm": {
+  "CM": {
     "name": "Curium"
   },
-  "Bk": {
+  "BK": {
     "name": "Berkelium"
   },
-  "Cf": {
+  "CF": {
     "name": "Californium"
   },
-  "Es": {
+  "ES": {
     "name": "Einsteinium"
   },
-  "Fm": {
+  "FM": {
     "name": "Fermium"
   },
-  "Md": {
+  "MD": {
     "name": "Mendelevium"
   },
-  "No": {
+  "NO": {
     "name": "Nobelium"
   },
-  "Lr": {
+  "LR": {
     "name": "Lawrencium"
   },
-  "Rf": {
+  "RF": {
     "name": "Rutherfordium"
   },
-  "Db": {
+  "DB": {
     "name": "Dubnium"
   },
-  "Sg": {
+  "SG": {
     "name": "Seaborgium"
   },
-  "Bh": {
+  "BH": {
     "name": "Bohrium"
   },
-  "Hs": {
+  "HS": {
     "name": "Hassium"
   },
-  "Mt": {
+  "MT": {
     "name": "Meitnerium"
   },
-  "Ds": {
+  "DS": {
     "name": "Darmstadtium"
   },
-  "Rg": {
+  "RG": {
     "name": "Roentgenium"
   },
-  "Cn": {
+  "CN": {
     "name": "Copernicium"
   },
-  "Nh": {
+  "NH": {
     "name": "Nihonium"
   },
-  "Fl": {
+  "FL": {
     "name": "Flerovium"
   },
-  "Mc": {
+  "MC": {
     "name": "Moscovium"
   },
-  "Lv": {
+  "LV": {
     "name": "Livermorium"
   },
-  "Ts": {
+  "TS": {
     "name": "Tennessine"
   },
-  "Og": {
+  "OG": {
     "name": "Oganesson"
   },
-  "Uue": {
+  "UUE": {
     "name": "Ununennium"
   }
 }

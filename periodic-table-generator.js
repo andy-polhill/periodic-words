@@ -5197,7 +5197,7 @@ const elements = [
 
     return {
         ...output,
-        [element.symbol]: {
+        [element.symbol.toUpperCase()]: {
             name: element.name
         } 
     }
