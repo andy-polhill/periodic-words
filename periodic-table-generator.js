@@ -5205,7 +5205,7 @@ const elements = [
 
 console.log(elements)
 
-fs.writeFile('./elements.json', JSON.stringify(elements, null, 2), err => {
+fs.writeFile('./elements.js', `const elements = ${JSON.stringify(elements, null, 2)};`, err => {
     if (err) {
       console.error(err);
     }
