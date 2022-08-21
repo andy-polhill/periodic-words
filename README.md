@@ -1,2 +1,11 @@
+- [ ] Cycle through results
+- [ ] Handle whitespace
+- [ ] responsiveness, line breaks on words?
+- [ ] Unit tests
 - [ ] Make it shareable
-- [ ] Sort the scoring for multi chars
+- [ ] Sort the group colours, style elements
+- [ ] Style the page
+- [ ] Wiki links
+- [ ] total atomic score
+- [ ] GH Actions / Pages
+- [x] Sort the scoring for multi chars

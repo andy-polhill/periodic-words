@@ -1,18 +1,47 @@
+/*
+- Alkali metals.
+- Alkaline earth metals.
+Rare earth metals.
+Crystallogens.
+Pnictogens.
+Chalcogens.
+Halogens.
+Noble gases. */
+
 :root {
-  --unmatched-bg-color: rgb(228 228 228);
-  --diatomic-nonmetal-bg-color: #fff;
-  --noble-gas-bg-color: #fff;
-  --alkali-metal-bg-color: #fff;
-  --alkaline-earth-metal-bg-color: #fff;
-  --metalloid-bg-color: #fff;
-  --polyatomic-nonmetal-bg-color: #fff;
-  --post-transition-metal-bg-color: #ecd5b2;
+  --unmatched-color: 150, 150, 150;
 
-  --transition-metal-bg-color: #ecd5b2;
+  --palette-color-1: 158,1,66;
+  --palette-color-2: 213,62,79;
+  --palette-color-3: 244,109,67;
+  --palette-color-4: 253,174,97;
+  --palette-color-5: 254,224,139;
+  --palette-color-6: 255,255,191;
+  --palette-color-7: 230,245,152;
+  --palette-color-8: 171,221,164;
+  --palette-color-9: 102,194,165;
+  --palette-color-10: 50,136,189;
+  --palette-color-11: 94,79,162;
 
-  --lanthanide-bg-color: #fff;
-  --actinide-bg-color: #fff;
-  /* -bg-color: #fff; */
+  --background-opacity: 0.3;
+
+
+  --alkali-metal-color: var(--palette-color-9);
+  --alkaline-earth-metal-color: var(--palette-color-3);
+  --transition-metal-color: var(--palette-color-11);
+  --post-transition-metal-color: var(--palette-color-8);
+  --metalloid-color: var(--palette-color-5);
+
+  /* reactive non-metal */
+  --diatomic-nonmetal-color: var(--palette-color-10);
+  --polyatomic-nonmetal-color: var(--palette-color-10);
+
+  --noble-gas-color: var(--palette-color-2); 
+  --lanthanide-color: var(--palette-color-11);
+  --actinide-color: var(--palette-color-4);
+
+  --unknown-color: rgb(228 228 228);
+
 }
 
 .elements {
@@ -22,12 +51,13 @@
 
 .element {
   flex: 0 1 auto;
-  border: solid 1px;
+  /* border: solid 1px; */
   height: 120px;
   width: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: arial, sans-serif;
   text-transform: capitalize;
   margin-right: 5px;
   padding: 5px;
@@ -35,12 +65,84 @@
 }
 
 .element--unmatched {
-  background-color: var(--unmatched-bg-color);
+  color: rgba(var(--unmatched-color), 1);
+  background-color: rgba(
+    var(--unmatched-color),
+    var(--background-opacity));
+}
+
+.element--alkali-metal {
+  color: rgba(var(--alkali-metal-color), 1);
+  background-color: rgba(
+    var(--alkali-metal-color),
+    var(--background-opacity));
+}
+
+.element--alkaline-earth-metal {
+  color: #b45d43;
+  /* rgba(var(--alkaline-earth-metal-color), 1); */
+  background-color: rgba(
+    var(--alkaline-earth-metal-color),
+    var(--background-opacity));
 }
 
 .element--transition-metal {
-  background-color: var(--transition-metal-bg-color);
-  /* color: var(--transition-metal-bg-color); */
+  color: rgba(var(--transition-metal-color), 1);
+  background-color: rgba(
+    var(--transition-metal-color),
+    var(--background-opacity));
+}
+
+.element--post-transition-metal {
+  color: rgba(var(--post-transition-metal-color), 1);
+  background-color: rgba(
+    var(--post-transition-metal-color),
+    var(--background-opacity));
+}
+
+.element--metalloid {
+  color: #896400;
+  /* rgba(var(--metalloid-color), 1); */
+  background-color: rgba(
+    var(--metalloid-color), 0.8);
+}
+
+/* reactive non-metal */
+.element--polyatomic-nonmetal,
+.element--diatomic-nonmetal {
+  color: #1e6895;
+  /* rgba(var(--diatomic-nonmetal-color), 1); */
+  background-color: rgba(
+    var(--diatomic-nonmetal-color),
+    var(--background-opacity));
+}
+
+  /* color: rgba(var(--polyatomic-nonmetal-color), 1);
+  background-color: rgba(
+    var(--polyatomic-nonmetal-color),
+    var(--background-opacity));
+} */
+
+.element--noble-gas {
+  color: rgba(var(--noble-gas-color), 1);
+  background-color: rgba(
+    var(--noble-gas-color),
+    var(--background-opacity));
+}
+
+.element--lanthanide {
+  color: rgba(var(--lanthanide-color), 1);
+  background-color: rgba(
+    var(--lanthanide-color),
+    var(--background-opacity));
+}
+
+.element--actinide {
+  color: #a9774a
+  /* rgba(var(--actinide-color), 1); */
+  background-color: rgba(
+    var(--actinide-color),
+    var(--background-opacity));
 }
 
 .element__top-row {
@@ -61,7 +163,7 @@
 }
 
 .element__symbol {
-  font-size: 60px;
-  font-family: arial, sans-serif;
+  font-size: 75px;
+  line-height: 1em;
   text-align: center;
 }
