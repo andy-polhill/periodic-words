@@ -8,6 +8,14 @@ function parse(word_input) {
   recursive_tree(word_input, []);
 
   function recursive_tree(word, elements) {
+
+    // if the result has fake (non matching) element of more than one symbol return
+    if(elements.find(element => {
+      return !element.match && element.symbol.length > 1
+    })) {
+      return
+    }
+
     if (!word.length) { // we have reached the end
       return options.push({
         score: score(elements),
@@ -31,7 +39,7 @@ function parse(word_input) {
     // Boost the score of two character elements (for interest)
     let score = elements
       .filter(entry => entry.match)
-      .reduce((total, entry) => total + (entry.symbol.length * 10), 0)
+      .reduce((total, entry) => total + entry.symbol.length, 0)
     
     return score;
   }
@@ -39,7 +47,12 @@ function parse(word_input) {
   // remove the ones that score nothing
   options = options
     .filter(option => option.score !== 0)
-    .sort((a, b) => a.score > b.score ? -1 : 0)
+    .sort((a, b) => {
+      if(a.score === b.score) { // shorter results rank higher
+        return a.elements.length - b.elements.length
+      }
+      return b.score - a.score
+    })
 
   return options;
 }

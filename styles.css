@@ -144,7 +144,7 @@ Noble gases. */
 }
 
 .element--actinide {
-  color: #a9774a
+  color: #a9774a;
   /* rgba(var(--actinide-color), 1); */
   background-color: rgba(
     var(--actinide-color),

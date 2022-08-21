@@ -1,4 +1,5 @@
-- [ ] Cycle through results
+- [ ] Cycle through results, min / max
+- [ ] Sort by secondary field of least elements
 - [ ] responsiveness, line breaks on words?
 - [ ] Unit tests
 - [ ] Break on work
