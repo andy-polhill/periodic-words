@@ -46,6 +46,7 @@ Noble gases. */
 
 .elements {
   display: flex;
+  flex-wrap: wrap;
   margin: 20px 0;
 }
 
@@ -60,6 +61,7 @@ Noble gases. */
   font-family: arial, sans-serif;
   text-transform: capitalize;
   margin-right: 5px;
+  margin-bottom: 5px;
   padding: 5px;
   border-radius: 5px;
 }
@@ -69,6 +71,10 @@ Noble gases. */
   background-color: rgba(
     var(--unmatched-color),
     var(--background-opacity));
+}
+
+.element--unmatched {
+  background-color: none;
 }
 
 .element--alkali-metal {

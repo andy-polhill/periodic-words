@@ -38,8 +38,10 @@ function createElement(element) {
   if(element.match) {
     element_node.className = `${element_node.className} element--${element.category_class}`
   } else {
-    element_node.className = `${element_node.className} element--unmatched`
+    element_node.className = element_node.className + ' element--' +
+      (element.symbol === " " ? "empty" : "unmatched" )
   }
+
 
   return element_node;
 }
