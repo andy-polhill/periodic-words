@@ -41,15 +41,15 @@ class word_generator {
     })
 
     if(this.selected_index === 0) {
-      this.prev.setAttribute('disabled', '');
+      this.prev.setAttribute("disbled", "");
     } else {
-      this.prev.removeAttribute('disabled');
+      this.prev.removeAttribute("disabled");
     }
 
     if(this.selected_index === this.results.length - 1) {
-      this.next.setAttribute('disabled', '');
+      this.next.setAttribute("disabled", "");
     } else {
-      this.next.removeAttribute('disabled');
+      this.next.removeAttribute("disabled");
     }
 
     this.current_page.innerHTML = `${this.selected_index + 1} of ${this.results.length}`
@@ -64,7 +64,7 @@ class word_generator {
   }
   
   create_element(element) {
-    const element_node = document.createElement("div")
+    const element_node = document.createElement(element.match ? "a" : "span")
     element_node.className = "element"
   
     const top_row = document.createElement("span")
@@ -78,8 +78,10 @@ class word_generator {
   
     if(element.match) {
       element_node.className = `${element_node.className} element--${element.category_class}`
+      element_node.setAttribute("href", element.href)
+      element_node.setAttribute("target", "wikipedia")
     } else {
-      element_node.className = element_node.className + ' element--' +
+      element_node.className = element_node.className + " element--" +
         (element.symbol === " " ? "empty" : "unmatched" )
     }
   

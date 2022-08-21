@@ -5199,6 +5199,7 @@ const elements = [
         ...output,
         [element.symbol.toUpperCase()]: {
             name: element.name,
+            href: element.source,
             number: element.number,
             mass: Math.round((element.atomic_mass + Number.EPSILON) * 100) / 100,
             category: element.category,

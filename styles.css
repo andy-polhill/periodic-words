@@ -24,6 +24,7 @@ Noble gases. */
   --palette-color-11: 94,79,162;
 
   --background-opacity: 0.3;
+  --background-hover-opacity: 0.4;
 
 
   --alkali-metal-color: var(--palette-color-9);
@@ -50,20 +51,49 @@ Noble gases. */
   margin: 20px 0;
 }
 
+:root {
+  --element-height: 60px;
+  --element-width: 60px;
+  --element-spacing: 3px;
+  --element-font-size: 10px;
+}
+  
+
+@media (min-width: 481px) {
+  :root {
+    --element-height: 80px;
+    --element-width: 80px;
+    --element-spacing: 4px;
+    --element-font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) {
+  :root {
+    --element-height: 100px;
+    --element-width: 100px;
+    --element-spacing: 5px;
+    --element-font-size: 16px;
+  }
+}
+
+
 .element {
   flex: 0 1 auto;
   /* border: solid 1px; */
-  height: 120px;
-  width: 120px;
+  height: var(--element-height);
+  width: var(--element-width);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-family: arial, sans-serif;
+  font-size: var(--element-font-size);
   text-transform: capitalize;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  padding: 5px;
-  border-radius: 5px;
+  text-decoration: none;
+  margin-right: var(--element-spacing);
+  margin-bottom: var(--element-spacing);
+  padding: var(--element-spacing);
+  border-radius: var(--element-spacing);
 }
 
 .element--unmatched {
@@ -78,10 +108,16 @@ Noble gases. */
 }
 
 .element--alkali-metal {
-  color: rgba(var(--alkali-metal-color), 1);
+  color: #577b6e;
+  /* rgba(var(--alkali-metal-color), 1); */
   background-color: rgba(
     var(--alkali-metal-color),
-    var(--background-opacity));
+    0.6);
+}
+.element--alkali-metal:hover {
+  background-color: rgba(
+    var(--alkali-metal-color),
+    0.7);
 }
 
 .element--alkaline-earth-metal {
@@ -91,19 +127,36 @@ Noble gases. */
     var(--alkaline-earth-metal-color),
     var(--background-opacity));
 }
+.element--alkaline-earth-metal:hover {
+  background-color: rgba(
+    var(--alkaline-earth-metal-color),
+    var(--background-hover-opacity));
+}
 
+/* TODO: Fix this the green is way off */
 .element--transition-metal {
   color: rgba(var(--transition-metal-color), 1);
   background-color: rgba(
     var(--transition-metal-color),
     var(--background-opacity));
 }
+.element--transition-metal:hover {
+  background-color: rgba(
+    var(--transition-metal-color),
+    var(--background-hover-opacity));
+}
 
 .element--post-transition-metal {
-  color: rgba(var(--post-transition-metal-color), 1);
+  color: #5d7e58;
+  /* rgba(var(--post-transition-metal-color), 1); */
   background-color: rgba(
     var(--post-transition-metal-color),
-    var(--background-opacity));
+    0.6);
+}
+.element--post-transition-metal:hover {
+  background-color: rgba(
+    var(--post-transition-metal-color),
+    0.7);
 }
 
 .element--metalloid {
@@ -112,6 +165,11 @@ Noble gases. */
   background-color: rgba(
     var(--metalloid-color), 0.8);
 }
+.element--metalloid:hover {
+  background-color: rgba(
+    var(--metalloid-color), 1);
+}
+
 
 /* reactive non-metal */
 .element--polyatomic-nonmetal,
@@ -122,12 +180,12 @@ Noble gases. */
     var(--diatomic-nonmetal-color),
     var(--background-opacity));
 }
-
-  /* color: rgba(var(--polyatomic-nonmetal-color), 1);
+.element--polyatomic-nonmetal:hover,
+.element--diatomic-nonmetal:hover {
   background-color: rgba(
-    var(--polyatomic-nonmetal-color),
-    var(--background-opacity));
-} */
+    var(--diatomic-nonmetal-color),
+    var(--background-hover-opacity));
+}
 
 .element--noble-gas {
   color: rgba(var(--noble-gas-color), 1);
@@ -135,6 +193,12 @@ Noble gases. */
     var(--noble-gas-color),
     var(--background-opacity));
 }
+.element--noble-gas:hover {
+  background-color: rgba(
+    var(--noble-gas-color),
+    var(--background-hover-opacity));
+}
+
 
 .element--lanthanide {
   color: rgba(var(--lanthanide-color), 1);
@@ -142,13 +206,29 @@ Noble gases. */
     var(--lanthanide-color),
     var(--background-opacity));
 }
+.element--lanthanide:hover {
+  background-color: rgba(
+    var(--lanthanide-color),
+    var(--background-hover-opacity));
+}
 
 .element--actinide {
   color: #a9774a;
-  /* rgba(var(--actinide-color), 1); */
   background-color: rgba(
     var(--actinide-color),
     var(--background-opacity));
+}
+.element--actinide:hover {
+  background-color: rgba(
+    var(--actinide-color),
+    var(--background-hover-opacity));
+}
+
+.element--empty {
+  flex: 1 0 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .element__top-row {
@@ -169,7 +249,7 @@ Noble gases. */
 }
 
 .element__symbol {
-  font-size: 75px;
+  font-size: 3.5em;
   line-height: 1em;
   text-align: center;
 }

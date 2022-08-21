@@ -1,14 +1,22 @@
-- [ ] Cycle through results, min / max
-- [ ] Sort by secondary field of least elements
 - [ ] responsiveness, line breaks on words?
-- [ ] Unit tests
-- [ ] Break on work
-- [ ] Make it shareable
+- [ ] Break on word
+- [ ] Finalise all the colours (incl Unknown)
+- [ ] Unknown category
 - [ ] Sort the group colours, style elements
+- [ ] Unit tests
+- [ ] Make it shareable
 - [ ] Style the page
 - [ ] Wiki links
-- [ ] total atomic score
+- [ ] Look at that 3 char one
 - [ ] GH Actions / Pages
 - [ ] Add analytics
+
+= Launch
+- [ ] total atomic score
+
+= Done
+- [x] Don't add two char elements for dummies
+- [x] Sort by secondary field of least elements
+- [x] Cycle through results, min / max
 - [x] Sort the scoring for multi chars
 - [x] Handle whitespace
