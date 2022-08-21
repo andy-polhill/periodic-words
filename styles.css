@@ -1,0 +1,67 @@
+:root {
+  --unmatched-bg-color: rgb(228 228 228);
+  --diatomic-nonmetal-bg-color: #fff;
+  --noble-gas-bg-color: #fff;
+  --alkali-metal-bg-color: #fff;
+  --alkaline-earth-metal-bg-color: #fff;
+  --metalloid-bg-color: #fff;
+  --polyatomic-nonmetal-bg-color: #fff;
+  --post-transition-metal-bg-color: #ecd5b2;
+
+  --transition-metal-bg-color: #ecd5b2;
+
+  --lanthanide-bg-color: #fff;
+  --actinide-bg-color: #fff;
+  /* -bg-color: #fff; */
+}
+
+.elements {
+  display: flex;
+  margin: 20px 0;
+}
+
+.element {
+  flex: 0 1 auto;
+  border: solid 1px;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-transform: capitalize;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.element--unmatched {
+  background-color: var(--unmatched-bg-color);
+}
+
+.element--transition-metal {
+  background-color: var(--transition-metal-bg-color);
+  /* color: var(--transition-metal-bg-color); */
+}
+
+.element__top-row {
+  display: flex;
+}
+
+.element__number {
+  flex: 1 0 auto;
+}
+
+.element__mass {
+  flex: 1 0 auto;
+  text-align: right;
+}
+
+.element__name {
+  text-align: center;
+}
+
+.element__symbol {
+  font-size: 60px;
+  font-family: arial, sans-serif;
+  text-align: center;
+}

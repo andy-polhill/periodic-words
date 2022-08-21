@@ -5198,14 +5198,20 @@ const elements = [
     return {
         ...output,
         [element.symbol.toUpperCase()]: {
-            name: element.name
+            name: element.name,
+            number: element.number,
+            mass: Math.round((element.atomic_mass + Number.EPSILON) * 100) / 100,
+            category: element.category,
+            category_class: element.category
+                .replace(/ /g, '-')
+                .replace(/,/g, '-')
         } 
     }
 }, {})
 
 console.log(elements)
 
-fs.writeFile('./elements.js', `const elements = ${JSON.stringify(elements, null, 2)};`, err => {
+fs.writeFile('./elements.js', `const element_data = ${JSON.stringify(elements, null, 2)};`, err => {
     if (err) {
       console.error(err);
     }

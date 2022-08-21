@@ -1,49 +1,53 @@
-const form = document.getElementById("input_form");
-const output = document.getElementById("output");
+const form = document.getElementById("input_form")
+const elements_container = document.getElementById("elements")
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  alert('HI');
-  const string = new FormData(event.target).get("string");
-  const options = start(string)
+  event.preventDefault()
+  elements_container.innerHTML = ""
+
+  const string = new FormData(event.target).get("string")
+  const options = parse(string)
   console.log(options);
-  output.innerHTML = JSON.stringify(options, null, 2)
+
+  // let pretty = options.map(option => option.elements.map(element => entry.symbol))
+  if(!options.length) {
+    console.log("No options")
+    return;
+  }
+
+  const top_option = options[0];
+
+  top_option.elements.forEach(element => {
+    elements_container.appendChild(createElement(element))
+  })
 });
 
-function start(word_input) {
-  const options = [];
+function createElement(element) {
+  const element_node = document.createElement("div")
+  element_node.className = "element"
 
-  if (word_input == null || word_input.length == 0) {
-    console.error("No input provided");
+  const top_row = document.createElement("span")
+  top_row.className = `element__top-row`
+  top_row.appendChild(createNode(element.number, "number"))
+  top_row.appendChild(createNode(element.mass, "mass"))
+  element_node.appendChild(top_row)
+
+  element_node.appendChild(createNode(element.symbol, "symbol"))
+  element_node.appendChild(createNode(element.name, "name"))
+
+  if(element.match) {
+    element_node.className = `${element_node.className} element--${element.category_class}`
+  } else {
+    element_node.className = `${element_node.className} element--unmatched`
   }
 
-  recursive_tree(word_input, []);
+  return element_node;
+}
 
-  function recursive_tree(word, output) {
-    if (!word.length) { // we have reached the end
-      return options.push({
-        score: score(output),
-        entries: output
-      })
-    }
-  
-    const space_left = Math.min(2, word.length)
-  
-    for(let i = 1; i <= space_left; i++) {
-      const [entry, remainder] = [word.slice(0, i), word.slice(i)]
-      recursive_tree(remainder, [...output, {
-        symbol: entry,
-        element: {
-          ...elements[entry.toUpperCase()]
-        }
-      }]);
-    }
-  }
-  
-  function score(output) {
-    let score = output.filter(entry => entry.element.name).length / word_input.length;
-    return Math.round(score * 100)
-  }
+function createNode(property, name) {
+  const node = document.createElement("span")
+  node.className = `element__${name}`
+  node.innerHTML = property || "&nbsp"
 
-  return options;
+  return node;
 }
