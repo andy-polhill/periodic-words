@@ -5203,7 +5203,7 @@ const elements = [
             number: element.number,
             mass: Math.round((element.atomic_mass + Number.EPSILON) * 100) / 100,
             category: element.category,
-            category_class: element.category
+            category_class: (element.category.includes("unknown")) ? "unknown" : element.category
                 .replace(/ /g, '-')
                 .replace(/,/g, '-')
         } 

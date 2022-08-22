@@ -2,29 +2,39 @@
 
 class word_generator {
   constructor() {
+    const search_params = new URLSearchParams(window.location.search)
+    const text = search_params.get('text')
+    
     this.form = document.getElementById("input_form")
+    this.text_input = document.getElementById("text_input")
+
     this.elements_container = document.getElementById("elements")
     this.next = document.getElementById("next")
     this.prev = document.getElementById("prev")
     this.current_page = document.getElementById("current_page")
     
-    this.form.addEventListener("submit", (e) => this.start(e))
+    this.form.addEventListener("submit", (e) => {
+      e.preventDefault()
+      this.start()
+    })
     this.next.addEventListener("click", () => this.change_result(1))
     this.prev.addEventListener("click", () => this.change_result(-1))
 
     this.results = [];
+
+    if(text) {
+      this.text_input.value = text
+      this.start()
+    }
   }
 
-  start(event) {
-    event.preventDefault()
+  start() {
     this.elements_container.innerHTML = ""
+    
+    const text_input = this.text_input.value
+    plausible('periodic-element-parse', { text_input })
+    this.results = parse(text_input)
   
-    const string = new FormData(event.target).get("string")
-    this.results = parse(string)
-
-    console.log(this.results)
-  
-    // let pretty = options.map(option => option.elements.map(element => entry.symbol))
     if(!this.results.length) {
       console.log("No options")
       return;

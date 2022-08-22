@@ -20,22 +20,28 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="stylesheet" href="styles.css?v=1.0">
-
+  <script defer data-domain="andypolhill.com" src="https://plausible.io/js/plausible.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 </head>
 
 <body>
-  <form id="input_form">
-    <input type="text" name="string" />
-    <input type="submit" />
-  </form>
-  <div id="elements" class="elements">
+  <main class="container">
+    <form id="input_form" class="input_form">
+      <input id="text_input" type="text" name="text" class="input_form__text" />
+      <input type="submit" class="input_form__submit "/>
+    </form>
+    <div id="elements" class="elements">
 
-  </div>
-  <div id="controls" class="controls">
-    <button id="prev" alt="prev" disabled>prev</button>
-    <button id="next" alt="next" disabled>next</button>
-    <span id="current_page"></span>
-  </div>
+    </div>
+    <div id="controls" class="controls">
+      <button id="prev" class="controls__prev-button" title="prev" disabled>❮</button>
+      <span id="current_page" class="controls__current-page"></span>
+      <button id="next" class="controls__next-button" title="next" disabled>❯</button>
+    </div>
+  </main>
+  <footer class="footer">
+    © Andrew Polhill 2022
+  </footer>
   <script src="elements.js"></script>
   <script src="parser.js?v=6"></script>
   <script src="index.js?v=6"></script>

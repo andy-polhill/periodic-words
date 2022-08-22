@@ -1,18 +1,25 @@
 function parse(word_input) {
   let options = [];
 
-  if (word_input == null || word_input.length == 0) {
-    console.error("No input provided");
+  if(word_input == null || word_input.length == 0) {
+    console.error("No input provided")
   }
 
-  recursive_tree(word_input, []);
+  // Lets cap it at 100 chars, that recursion might get expensive
+  word_input = word_input.substr(0, 100)
+
+  // break on a whole word for cleanliness
+  // word_input = word_input.substr(
+  //   0, Math.min(word_input.length,
+  //     word_input.lastIndexOf(" ")))
+
+  recursive_tree(word_input, [])
 
   function recursive_tree(word, elements) {
 
     // if the result has fake (non matching) element of more than one symbol return
-    if(elements.find(element => {
-      return !element.match && element.symbol.length > 1
-    })) {
+    if(elements.find(element =>
+        !element.match && element.symbol.length > 1)) {
       return
     }
 

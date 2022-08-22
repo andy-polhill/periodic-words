@@ -869,7 +869,7 @@ const element_data = {
     "number": 109,
     "mass": 278,
     "category": "unknown, probably transition metal",
-    "category_class": "unknown--probably-transition-metal"
+    "category_class": "unknown"
   },
   "DS": {
     "name": "Darmstadtium",
@@ -877,7 +877,7 @@ const element_data = {
     "number": 110,
     "mass": 281,
     "category": "unknown, probably transition metal",
-    "category_class": "unknown--probably-transition-metal"
+    "category_class": "unknown"
   },
   "RG": {
     "name": "Roentgenium",
@@ -885,7 +885,7 @@ const element_data = {
     "number": 111,
     "mass": 282,
     "category": "unknown, probably transition metal",
-    "category_class": "unknown--probably-transition-metal"
+    "category_class": "unknown"
   },
   "CN": {
     "name": "Copernicium",
@@ -901,7 +901,7 @@ const element_data = {
     "number": 113,
     "mass": 286,
     "category": "unknown, probably transition metal",
-    "category_class": "unknown--probably-transition-metal"
+    "category_class": "unknown"
   },
   "FL": {
     "name": "Flerovium",
@@ -917,7 +917,7 @@ const element_data = {
     "number": 115,
     "mass": 289,
     "category": "unknown, probably post-transition metal",
-    "category_class": "unknown--probably-post-transition-metal"
+    "category_class": "unknown"
   },
   "LV": {
     "name": "Livermorium",
@@ -925,7 +925,7 @@ const element_data = {
     "number": 116,
     "mass": 293,
     "category": "unknown, probably post-transition metal",
-    "category_class": "unknown--probably-post-transition-metal"
+    "category_class": "unknown"
   },
   "TS": {
     "name": "Tennessine",
@@ -933,7 +933,7 @@ const element_data = {
     "number": 117,
     "mass": 294,
     "category": "unknown, probably metalloid",
-    "category_class": "unknown--probably-metalloid"
+    "category_class": "unknown"
   },
   "OG": {
     "name": "Oganesson",
@@ -941,7 +941,7 @@ const element_data = {
     "number": 118,
     "mass": 294,
     "category": "unknown, predicted to be noble gas",
-    "category_class": "unknown--predicted-to-be-noble-gas"
+    "category_class": "unknown"
   },
   "UUE": {
     "name": "Ununennium",
@@ -949,6 +949,6 @@ const element_data = {
     "number": 119,
     "mass": 315,
     "category": "unknown, but predicted to be an alkali metal",
-    "category_class": "unknown--but-predicted-to-be-an-alkali-metal"
+    "category_class": "unknown"
   }
 };
