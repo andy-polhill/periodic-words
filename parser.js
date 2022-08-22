@@ -51,6 +51,10 @@ function parse(word_input) {
     return score;
   }
 
+  if(options.length === 1) {
+    return options
+  }
+  
   // remove the ones that score nothing
   options = options
     .filter(option => option.score !== 0)

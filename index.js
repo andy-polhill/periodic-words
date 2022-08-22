@@ -1,4 +1,13 @@
-
+const start_words = [
+  'Gandalf',
+  'Britain',
+  'Mountain',
+  'Banana',
+  'Biscuits',
+  'Pakistan',
+  'Ben Nevis',
+  'Helicopter'
+]
 
 class word_generator {
   constructor() {
@@ -24,8 +33,10 @@ class word_generator {
 
     if(text) {
       this.text_input.value = text
-      this.start()
+    } else {
+      this.text_input.value = start_words[Math.floor(Math.random() * start_words.length)]
     }
+    this.start()
   }
 
   start() {
@@ -51,7 +62,7 @@ class word_generator {
     })
 
     if(this.selected_index === 0) {
-      this.prev.setAttribute("disbled", "");
+      this.prev.setAttribute("disabled", "");
     } else {
       this.prev.removeAttribute("disabled");
     }

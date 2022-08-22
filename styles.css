@@ -98,6 +98,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-size: var(--body-font-size);
 }
 
@@ -372,4 +373,5 @@ body {
   flex: 0 1 auto;
   margin: calc(var(--element-spacing) * 2);
   text-align: right;
+  align-self: end;
 }

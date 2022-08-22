@@ -1,11 +1,6 @@
-- [ ] URL param shareable link, add selected index
-- [ ] Update the URL on form submit
-- [ ] some kind of default state
-- [ ] Make it shareable dynamic image (cloud function)
+- [ ] Make it shareable
+- [ ] Social image (cloud function)
 - [ ] GH Actions / Pages
-- [ ] Add analytics
-- [ ] Favicon
-- [ ] Min Button doesn't disable on scrollback
 - [ ] Do we always want a space to be a line break (or only if needed?)
 
 = Launch
@@ -13,8 +8,14 @@
 - [ ] Look at that 3 char one
 - [ ] Unit tests
 - [ ] total atomic score
+- [ ] better favicon (maybe a random one)
 
 = Done
+- [x] Two letter word breaks
+- [x] Min Button doesn't disable on scrollback
+- [x] some kind of default state
+- [x] Favicon
+- [x] Add analytics
 - [x] Add copyright text
 - [x] Set char max
 - [x] Sort the group colours, style elements
