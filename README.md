@@ -3,12 +3,14 @@
 - [ ] GH Actions / Pages
 - [ ] Do we always want a space to be a line break (or only if needed?)
 
+
 = Launch
 - [ ] Unknown category
 - [ ] Look at that 3 char one
 - [ ] Unit tests
 - [ ] total atomic score
 - [ ] better favicon (maybe a random one)
+
 
 = Done
 - [x] Two letter word breaks
