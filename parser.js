@@ -8,11 +8,6 @@ function parse(word_input) {
   // Lets cap it at 100 chars, that recursion might get expensive
   word_input = word_input.substr(0, 100)
 
-  // break on a whole word for cleanliness
-  // word_input = word_input.substr(
-  //   0, Math.min(word_input.length,
-  //     word_input.lastIndexOf(" ")))
-
   recursive_tree(word_input, [])
 
   function recursive_tree(word, elements) {
