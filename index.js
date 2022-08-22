@@ -5,8 +5,11 @@ const start_words = [
   'Banana',
   'Biscuits',
   'Pakistan',
+  'France',
   'Ben Nevis',
-  'Helicopter'
+  'Helicopter',
+  'Southern',
+  'Cornwallis',
 ]
 
 class word_generator {
