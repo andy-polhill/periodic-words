@@ -30,20 +30,27 @@
       <input id="text_input" type="text" name="text" class="input_form__text" />
       <input type="submit" class="input_form__submit" value="Go!"/>
     </form>
+
     <div id="elements" class="elements">
 
     </div>
+
     <div id="controls" class="controls">
       <button id="prev" class="controls__prev-button" title="prev" disabled>❮</button>
       <span id="current_page" class="controls__current-page"></span>
       <button id="next" class="controls__next-button" title="next" disabled>❯</button>
     </div>
+
+    <button id="share" class="input_form__share" title="share">
+      <img src="./assets/share.svg" />
+    </button>
+
   </main>
   <footer class="footer">
     © Andrew Polhill 2022
   </footer>
-  <script src="elements.js"></script>
-  <script src="parser.js?v=6"></script>
-  <script src="index.js?v=6"></script>
+  <script src="scripts/elements.js"></script>
+  <script src="scripts/parser.js?v=6"></script>
+  <script src="scripts/index.js?v=6"></script>
 </body>
 </html>

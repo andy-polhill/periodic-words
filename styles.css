@@ -330,6 +330,19 @@ body {
   background-color: var(--button-background-hover-color);
 }
 
+.input_form__share {
+  border: none;
+  background: none;
+  margin-left: var(--element-spacing);
+  padding: calc(var(--element-spacing) * 2) calc(var(--element-spacing) * 3);
+}
+
+.input_form__share img {
+  height: 18px;
+  width: 18px;
+  fill: red;
+}
+
 /* Controls */
 
 .controls {

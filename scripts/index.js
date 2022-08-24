@@ -10,12 +10,15 @@ const start_words = [
   'Helicopter',
   'Southern',
   'Cornwallis',
+  'Nanga Parbat',
+  'Beach Tennis'
 ]
 
 class word_generator {
   constructor() {
     const search_params = new URLSearchParams(window.location.search)
     const text = search_params.get('text')
+    const index = search_params.get('index')
     
     this.form = document.getElementById("input_form")
     this.text_input = document.getElementById("text_input")
@@ -25,12 +28,15 @@ class word_generator {
     this.prev = document.getElementById("prev")
     this.current_page = document.getElementById("current_page")
     
+    this.share_button = document.getElementById("share")
+
     this.form.addEventListener("submit", (e) => {
       e.preventDefault()
       this.start()
     })
     this.next.addEventListener("click", () => this.change_result(1))
     this.prev.addEventListener("click", () => this.change_result(-1))
+    this.share_button.addEventListener("click", () => this.share())
 
     this.results = [];
 
@@ -38,6 +44,11 @@ class word_generator {
       this.text_input.value = text
     } else {
       this.text_input.value = start_words[Math.floor(Math.random() * start_words.length)]
+    }
+
+    this.selected_index = 0;
+    if(index) {
+      this.selected_index = parseInt(index, 10)
     }
     this.start()
   }
@@ -53,8 +64,6 @@ class word_generator {
       console.log("No options")
       return;
     }
-
-    this.selected_index = 0
     this.render_result()
   }
 
@@ -117,6 +126,18 @@ class word_generator {
     node.className = `element__${name}`
     node.innerHTML = property || "&nbsp"
     return node;
+  }
+
+  share() {
+    const { protocal, host, pathname } = window.location
+    let url = `
+      ${location.protocol}//${location.host}${location.pathname}`
+      + `?text=${this.text_input.value}&index=${this.selected_index}`;
+    navigator.clipboard.writeText(url).then(() => {
+      console.log('success')
+    }, () => {
+      console.log('fail')
+    });
   }
 }
 
