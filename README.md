@@ -1,10 +1,13 @@
 - [ ] Make it shareable
+- [ ] Style toast
+- [ ] modify the social image url
 - [ ] Social image (cloud function)
 - [ ] GH Actions / Pages
 - [ ] Do we always want a space to be a line break (or only if needed?)
 
 
 = Launch
+- [ ] Sort out the greys
 - [ ] Unknown category
 - [ ] Look at that 3 char one
 - [ ] Unit tests

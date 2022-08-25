@@ -29,9 +29,12 @@ class word_generator {
     this.current_page = document.getElementById("current_page")
     
     this.share_button = document.getElementById("share")
+    this.toast = document.getElementById("toast")
+    this.toast_content = document.getElementById("toast_content")
 
     this.form.addEventListener("submit", (e) => {
       e.preventDefault()
+      this.selected_index = 0;
       this.start()
     })
     this.next.addEventListener("click", () => this.change_result(1))
@@ -128,16 +131,22 @@ class word_generator {
     return node;
   }
 
-  share() {
+  async share() {
     const { protocal, host, pathname } = window.location
     let url = `
       ${location.protocol}//${location.host}${location.pathname}`
       + `?text=${this.text_input.value}&index=${this.selected_index}`;
-    navigator.clipboard.writeText(url).then(() => {
-      console.log('success')
-    }, () => {
-      console.log('fail')
-    });
+
+    try {
+      await navigator.clipboard.writeText(url)
+      this.toast_content.innerHTML = "Share link copied to clipboard"
+    } catch(e) {
+      this.toast_content.innerHTML = "Copy to clipboard failed ⤫"
+    };
+    this.toast.style.display = "inline-flex"
+    setTimeout(() => {
+      this.toast.style.display = "none"
+    }, 3000)
   }
 }
 

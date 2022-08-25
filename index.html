@@ -41,9 +41,17 @@
       <button id="next" class="controls__next-button" title="next" disabled>❯</button>
     </div>
 
-    <button id="share" class="input_form__share" title="share">
-      <img src="./assets/share.svg" />
-    </button>
+    <div id="share_bar" class="share_bar">
+      <button id="share" class="input_form__share" title="share">
+        <img src="./assets/share.svg" />
+      </button>
+
+      <div id="toast" class="toast" style="display:none;">
+        <div id="toast_content" class="toast_content">
+          Link copied to clipboard
+        </div>
+      </div>
+    </div>
 
   </main>
   <footer class="footer">

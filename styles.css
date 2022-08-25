@@ -22,6 +22,10 @@ Noble gases. */
   --palette-color-10: 50,136,189;
   --palette-color-11: 94,79,162;
 
+  --palette-grey-light:#e8e8e8;
+  --palette-grey-mid:#d8d8d8;
+  --palette-grey-dark:#bebdbd;
+
   --background-opacity: 0.3;
   --background-hover-opacity: 0.4;
 
@@ -47,11 +51,13 @@ Noble gases. */
   --element-spacing: 3px;
   --element-font-size: 10px;
 
-  --button-background-color:#d8d8d8;
-  --button-background-hover-color:#bebdbd;
+  --button-background-color: var(--palette-grey-mid);
+  --button-background-hover-color: var(--palette-grey-dark);
+  --button-background-disabled-color: var(--palette-grey-light);
   --button-font-size: 12px;
   --body-font-size: 12px;
   --button-height: 25px;
+  --share-button-height: 14px;
 
   --container-margin: 20px 0;
   --form-margin: 10px 0;
@@ -65,6 +71,7 @@ Noble gases. */
     --element-font-size: 13px;
 
     --button-height: 28px;
+    --share-button-height: 18px;
     --button-font-size: 13px;
     --body-font-size: 12px;
 
@@ -81,6 +88,7 @@ Noble gases. */
     --element-font-size: 16px;
 
     --button-height: 28px;
+    --share-button-height: 24px;
     --button-font-size: 14px;
     --body-font-size: 14px;
 
@@ -100,6 +108,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: var(--body-font-size);
+  margin: 0;
 }
 
 .container {
@@ -316,7 +325,7 @@ body {
 }
 
 .input_form__text {
-  padding-left: calc(var(--element-spacing) * 2);
+  padding-left: calc(var(--element-spacing) * 2);  
 }
 
 .input_form__submit {
@@ -324,6 +333,7 @@ body {
   margin-left: var(--element-spacing);
   padding: calc(var(--element-spacing) * 2) calc(var(--element-spacing) * 3);
   background-color: var(--button-background-color);
+  border-radius: var(--element-spacing);
 }
 
 .input_form__submit:hover {
@@ -338,9 +348,8 @@ body {
 }
 
 .input_form__share img {
-  height: 18px;
-  width: 18px;
-  fill: red;
+  height: var(--share-button-height);
+  width: var(--share-button-height);
 }
 
 /* Controls */
@@ -372,6 +381,13 @@ body {
   background-color: var(--button-background-hover-color);
 }
 
+.controls__next-button:disabled,
+.controls__next-button[disabled],
+.controls__prev-button:disabled,
+.controls__prev-button[disabled] {
+  background-color: var(--button-background-disabled-color);
+}
+
 .controls__prev-button {
   margin-right: var(--element-spacing);
 }
@@ -387,4 +403,27 @@ body {
   margin: calc(var(--element-spacing) * 2);
   text-align: right;
   align-self: end;
+}
+
+/* Toast */
+
+.share_bar {
+  display: flex;
+  align-self: center;
+  align-items: center;
+}
+
+.toast {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+.toast_content {
+  border-radius: var(--element-spacing);
+  background-color: var(--palette-grey-light);
+  padding: calc(var(--element-spacing) * 2);
 }
