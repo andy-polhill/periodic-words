@@ -1,7 +1,5 @@
 - [ ] modify the social image url
 - [ ] Social image (cloud function)
-- [ ] GH Actions / Pages
-- [ ] Do we always want a space to be a line break (or only if needed?)
 
 
 = Launch
@@ -12,9 +10,11 @@
 - [ ] Unit tests
 - [ ] total atomic score
 - [ ] better favicon (maybe a random one)
+- [ ] Do we always want a space to be a line break (or only if needed?)
 
 
 = Done
+- [x] GH Actions / Pages
 - [x] Make it shareable
 - [x] Style toast
 - [x] Two letter word breaks

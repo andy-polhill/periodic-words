@@ -60,7 +60,6 @@ class word_generator {
     this.elements_container.innerHTML = ""
     
     const text_input = this.text_input.value
-    this.update_og_image(text_input)
     plausible('periodic-element-parse', { text_input })
     this.results = parse(text_input)
   
@@ -69,14 +68,6 @@ class word_generator {
       return;
     }
     this.render_result()
-  }
-
-  update_og_image(text_input) {
-    document
-      .querySelector('meta[property="og:image"]')
-      .setAttribute(
-        "content",
-        `https://social-image-capture-wioykkdv7a-nw.a.run.app/?text=${text_input}&index=${this.selected_index}`);
   }
 
   render_result() {
