@@ -1,5 +1,3 @@
-- [ ] Make it shareable
-- [ ] Style toast
 - [ ] modify the social image url
 - [ ] Social image (cloud function)
 - [ ] GH Actions / Pages
@@ -7,6 +5,7 @@
 
 
 = Launch
+- [ ] opacity change on the fade
 - [ ] Sort out the greys
 - [ ] Unknown category
 - [ ] Look at that 3 char one
@@ -16,6 +15,8 @@
 
 
 = Done
+- [x] Make it shareable
+- [x] Style toast
 - [x] Two letter word breaks
 - [x] Min Button doesn't disable on scrollback
 - [x] some kind of default state
