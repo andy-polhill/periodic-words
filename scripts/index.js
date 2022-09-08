@@ -60,7 +60,7 @@ class word_generator {
     this.elements_container.innerHTML = ""
     
     const text_input = this.text_input.value
-    plausible('periodic-element-parse', { text_input })
+    plausible('periodic-element-parse', { props: { text_input } })
     this.results = parse(text_input)
   
     if(!this.results.length) {
