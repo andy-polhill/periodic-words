@@ -1,8 +1,11 @@
+
+<img width="630" alt="Screenshot 2022-10-01 at 22 23 36" src="https://user-images.githubusercontent.com/2196085/193428909-29986b48-9517-405b-8bc3-05f343686dac.png">
+
 - [ ] modify the social image url
 - [ ] Social image (cloud function)
 
 
-= Launch
+= Next
 - [ ] opacity change on the fade
 - [ ] Sort out the greys
 - [ ] Unknown category
